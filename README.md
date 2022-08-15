@@ -1,10 +1,10 @@
-# Nobara Linux binary Patch for Zoom meeting software
+# Nobara Linux binary patches for Zoom meeting software
 
 This repository contains patches for the Zoom meeting software, to allow screen sharing on Nobara Linux with any desktop environment.
 
 ## Rationale
 
-Zoom restricts screen sharing on Wayland to a few "supported" operating systems and GNOME desktop environments. Those operating systems are hardcoded within the Zoom binary. The patches contained in this repository are intended to patch the binary file by replacing any string occurence of "fedora" into "nobara". Futhermore the .desktop-file gets patched in order to run Zoom with the environment variable XDG_DESKTOP_ENVIRONMENT set to GNOME (instead whatever is running).
+Zoom restricts screen sharing on Wayland to a few "supported" operating systems and GNOME desktop environments. Those operating systems are hardcoded within the Zoom binary. The patches contained in this repository are intended to patch the binary file by replacing any string occurence of "fedora" into "nobara". Futhermore the .desktop-file gets patched in order to run Zoom with the environment variable XDG_CURRENT_DESKTOP set to GNOME (instead whatever is running).
 
 These patches work for me on Nobara 36 with KDE.
 
