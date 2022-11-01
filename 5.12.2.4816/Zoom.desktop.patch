@@ -1,0 +1,11 @@
+--- /usr/share/applications/Zoom.desktop.orig	2022-08-15 15:34:26.492721266 +0200
++++ /usr/share/applications/Zoom.desktop	2022-08-15 15:06:53.889883699 +0200
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Name=Zoom
+ Comment=Zoom Video Conference
+-Exec=/usr/bin/zoom %U
++Exec=env XDG_CURRENT_DESKTOP=GNOME /usr/bin/zoom %U
+ Icon=Zoom
+ Terminal=false
+ Type=Application
