@@ -12,8 +12,8 @@ ZOOM_VERSION=$(dnf info --installed zoom | awk -F': ' '/^Version/ { print $2 }')
 
 echo "Binary patching zoom"
 mv /opt/zoom/zoom /opt/zoom/zoom.orig
-bspatch /opt/zoom/zoom.orig /opt/zoom/zoom zoom.bspatch
+bspatch /opt/zoom/zoom.orig /opt/zoom/zoom ${ZOOM_VERSION}/zoom.bspatch
 
 echo Patching Zoom.desktop
 cp /usr/share/applications/Zoom.desktop /usr/share/applications/Zoom.desktop.orig
-patch < Zoom.desktop.patch
+(cd /usr/share/applications && patch)  < Zoom.desktop.patch
